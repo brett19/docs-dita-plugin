@@ -36,6 +36,16 @@
 					href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
 					rel="stylesheet" />
 
+				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+				<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/obsidian.min.css" />
+				<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+				<script>
+					$(document).ready(function() {
+  					$('.codeblock').each(function(i, e) {hljs.highlightBlock(e)});
+					});
+				</script>
+
 			</head>
 
 			<body>
