@@ -35,15 +35,16 @@
 				<link
 					href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
 					rel="stylesheet" />
+				<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js" />
 
 				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
 				<link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/obsidian.min.css" />
 				<script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
 				<script>
-					$(document).ready(function() {
-  					$('.codeblock').each(function(i, e) {hljs.highlightBlock(e)});
-					});
+				$(document).ready(function() {
+				  $('.codeblock').each(function(i, e) {hljs.highlightBlock(e)});
+				});
 				</script>
 
 			</head>
@@ -73,9 +74,6 @@
 							>Couchbase</a></p>
 				</footer>
 
-
-				<script src="http://code.jquery.com/jquery-1.9.1.min.js" />
-				<script src="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js" />
 			</body>
 		</html>
 	</xsl:template>

@@ -27,10 +27,6 @@
     <copy todir="${output.dir}">
       <fileset dir="${dita.plugin.com.couchbase.docs.html.dir}">
         <include name="css/*.css"/>
-      </fileset>
-    </copy>
-    <copy todir="${output.dir}">
-      <fileset dir="${dita.plugin.com.couchbase.docs.html.dir}">
         <include name="images/*.png"/>
       </fileset>
     </copy>
