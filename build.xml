@@ -28,6 +28,7 @@
       <fileset dir="${dita.plugin.com.couchbase.docs.html.dir}">
         <include name="css/*.css"/>
         <include name="images/*.png"/>
+        <include name="js/*.js"/>
       </fileset>
     </copy>
   </target>
