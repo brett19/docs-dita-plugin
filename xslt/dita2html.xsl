@@ -29,11 +29,11 @@
 
 				<style>
 					body{
-						padding-top:60px; /* make the container go all the way to the bottom of the top bar */
+						padding-top:40px; /* make the container go all the way to the bottom of the top bar */
 					}</style>
 
 				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+				
 				<link
 					href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
 					rel="stylesheet" />
@@ -41,16 +41,27 @@
 
 				<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/obsidian.min.css" />
 				<script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+
+				<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
+				
+				<link href="../css/base.css" rel="stylesheet" />
 				<script src="/js/main.js"></script>
 
 			</head>
 
 			<body>
-				<header class="navbar navbar-inverse navbar-fixed-top">
+				<header class="navbar navbar-fixed-top">
 					<div class="navbar-inner">
 						<div class="container-fluid container">
-							<a class="brand" href="/">Couchbase Documentation</a>
-
+							<a class="brand" href="http://www.couchbase.com/"> <img src="../images/cb-icon-sofa.png" /></a>
+							<a class="brand" style="color:#000552;" href="/">Couchbase Documentation <small>beta</small></a>
+							<div class="nav-collapse collapse">
+								<ul class="nav">
+									<li><a href="/">Docs Home</a></li>
+									<li><a href="/archive-index.html">Docs Archive</a></li>																	
+								</ul>
+							</div><!--/.nav-collapse -->
+							<!--<div><gcse:searchresults></gcse:searchresults></div>-->
 						</div>
 					</div>
 				</header>
@@ -63,11 +74,16 @@
 					</div>
 				</div>
 
-				<hr />
-
 				<footer>
-					<p style="text-align: center;">copyright 2014 <a href="http://www.couchbase.com/"
-							>Couchbase</a></p>
+					<div class="navbar navbar-fixed-bottom">
+					<div class="navbar-inner">
+						<div class="container-fluid container">
+							<div class="copyright">
+								© 2014 COUCHBASE All rights reserved.
+							</div>
+						</div>
+					</div>
+					</div>
 				</footer>
 
 			</body>
@@ -164,7 +180,7 @@
 											</xsl:if>
 											<xsl:choose>
 												<xsl:when
-													test="@copy-to and not(contains(@chunk, 'to-content')) and
+													test="@copy-to and not(contains(@chunk, 'to-content')) and 
                                         (not(@format) or @format = 'dita' or @format = 'ditamap') ">
 													<xsl:call-template name="replace-extension">
 														<xsl:with-param name="filename" select="@copy-to" />
@@ -244,7 +260,7 @@
 									</xsl:if>
 									<xsl:choose>
 										<xsl:when
-											test="@copy-to and not(contains(@chunk, 'to-content')) and
+											test="@copy-to and not(contains(@chunk, 'to-content')) and 
                                       (not(@format) or @format = 'dita' or @format = 'ditamap') ">
 											<xsl:call-template name="replace-extension">
 												<xsl:with-param name="filename" select="@copy-to" />
@@ -291,7 +307,7 @@
 			</xsl:if>
 			<xsl:choose>
 				<xsl:when
-					test="@copy-to and not(contains(@chunk, 'to-content')) and
+					test="@copy-to and not(contains(@chunk, 'to-content')) and 
                         (not(@format) or @format = 'dita' or @format = 'ditamap') ">
 					<xsl:value-of select="@copy-to" />
 				</xsl:when>

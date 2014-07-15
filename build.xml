@@ -7,7 +7,7 @@
     <property name="args.css.file" value="base.css"/>
     <property name="args.csspath" value="css"/>
   </target>
-
+  
   <target name="com.couchbase.docs.html">
     <loadfile property="com.couchbase.docs.html.map" srcfile="${dita.temp.dir}/${user.input.file.listfile}">
       <filterchain>
@@ -16,12 +16,12 @@
     </loadfile>
     <makeurl property="com.couchbase.docs.html.map.url" file="${dita.temp.dir}/${com.couchbase.docs.html.map}"/>
   </target>
-
+  
   <target name="dita2com.couchbase.docs.html"
           depends="com.couchbase.docs.html.init,
                    build-init,
                    preprocess,
-                   copy-revflag,
+                   copy-revflag, 
                    com.couchbase.docs.html,
                    xhtml.topics">
     <copy todir="${output.dir}">
@@ -32,5 +32,5 @@
       </fileset>
     </copy>
   </target>
-
+    
 </project>

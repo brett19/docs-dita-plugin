@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <params>
-  <param name="input.map.url" expression="${com.couchbase.docs.html.map.url}"/>
+  <param name="input.map.url" expression="${com.couchbase.docs.html.map.url}"/> 
 </params>

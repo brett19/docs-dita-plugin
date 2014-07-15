@@ -2,9 +2,7 @@
 
 /* layout */
 
-body {
-  text-align: center;
-}
+
 #body {
   width: 900px;
   margin: 0 auto;
@@ -22,12 +20,63 @@ body {
   margin-left: 200px;
 }
 
-/* body styles */
+/* my styles */
+
+.navbar .navbar-inner {
+  /*background-color: #000552;*/
+  background-color: #eee;
+  background-image: none;
+}
 
 body {
-  font-family: 'Droid Sans', Helvetica, Arial, serif;
-  padding: 20px 0;
+	font-family:'Open Sans', sans-serif;
+	padding: 50px 0;
 }
+
+h1 {
+	margin-bottom: 0.75em;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	/*color: #000666;*/
+	color: #a30a0a;
+}
+
+h2 {
+	border-bottom: solid;
+	border-color: #000666;
+	border-width: thin;
+	padding-top: 0.5em;
+	padding-bottom: 2px;
+}
+
+ul {
+	list-style-type: square;
+}
+
+div.copyright {
+	text-align: center;
+	color: #000552;
+	font-size: xx-small;
+	padding-top: 10px;
+}
+
+
+div.note {
+	border: solid #6669a3;
+	border-width: thin thin thin 10px;
+	padding: 0.5em;
+	margin-bottom: 10px;
+}
+
+.notetitle {
+	display: block;
+	font-weight: bold;
+}
+
+
+
+/*
 
 #main {
   border-left: solid 3px #EBEFF9;
@@ -45,9 +94,11 @@ body {
   color: black;
   text-decoration: none;
 }
+*/
 
 /* navigation */
 
+/*
 #nav {
   padding-right: 5px;
   font-size: 12px;
@@ -61,11 +112,14 @@ body {
 #nav > ul > li > span {
   font-weight: bold;
 }
+
+*/
+
 /*
 #nav li:hover {
   background-color: #DDE5F9;
 }
-*/
+
 
 #header {
   clear: both;
@@ -77,6 +131,7 @@ body {
 hr {
   display: none;
 }
+*/
 
 /* styles */
 
@@ -90,26 +145,9 @@ a:hover {
   text-decoration: underline;
 }
 
+/*
 .note {
   padding: 0 15px;
 }
+*/
 
-/* About page */
-
-.startguide, .download, .documentation, .contribute {
-  width: 120px;
-  padding-left: 40px;
-  float: left;
-  background-repeat: no-repeat;
-  background-position: left top;
-}
-
-.startguide, .contribute {
-  background-image: url('../images/start-here.png');
-}
-.download {
-  background-image: url('../images/go-down.png');
-}
-.documentation {
-  background-image: url('../images/text-x-generic.png');
-}
