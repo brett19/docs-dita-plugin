@@ -39,7 +39,7 @@
 					rel="stylesheet" />
 				<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.js" />
 
-				<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/obsidian.min.css" />
+				<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/default.min.css" />
 				<script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
 
 				<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
