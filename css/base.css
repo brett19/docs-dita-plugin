@@ -21,6 +21,14 @@
 }
 
 /* my styles */
+.brand .logo {
+  position: relative;
+  top: 2px;
+}
+.navbar .nav {
+  position: relative;
+  top: 2px;
+}
 
 .navbar .navbar-inner {
   /*background-color: #000552;*/
@@ -150,4 +158,3 @@ a:hover {
   padding: 0 15px;
 }
 */
-

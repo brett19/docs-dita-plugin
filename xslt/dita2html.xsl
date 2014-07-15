@@ -33,7 +33,7 @@
 					}</style>
 
 				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-				
+
 				<link
 					href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
 					rel="stylesheet" />
@@ -43,7 +43,7 @@
 				<script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
 
 				<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
-				
+
 				<link href="../css/base.css" rel="stylesheet" />
 				<script src="/js/main.js"></script>
 
@@ -53,12 +53,12 @@
 				<header class="navbar navbar-fixed-top">
 					<div class="navbar-inner">
 						<div class="container-fluid container">
-							<a class="brand" href="http://www.couchbase.com/"> <img src="../images/cb-icon-sofa.png" /></a>
+							<a class="brand" href="http://www.couchbase.com/"> <img src="../images/cb-icon-sofa.png" class="logo" /></a>
 							<a class="brand" style="color:#000552;" href="/">Couchbase Documentation <small>beta</small></a>
 							<div class="nav-collapse collapse">
 								<ul class="nav">
 									<li><a href="/">Docs Home</a></li>
-									<li><a href="/archive-index.html">Docs Archive</a></li>																	
+									<li><a href="/archive-index.html">Docs Archive</a></li>
 								</ul>
 							</div><!--/.nav-collapse -->
 							<!--<div><gcse:searchresults></gcse:searchresults></div>-->
@@ -180,7 +180,7 @@
 											</xsl:if>
 											<xsl:choose>
 												<xsl:when
-													test="@copy-to and not(contains(@chunk, 'to-content')) and 
+													test="@copy-to and not(contains(@chunk, 'to-content')) and
                                         (not(@format) or @format = 'dita' or @format = 'ditamap') ">
 													<xsl:call-template name="replace-extension">
 														<xsl:with-param name="filename" select="@copy-to" />
@@ -260,7 +260,7 @@
 									</xsl:if>
 									<xsl:choose>
 										<xsl:when
-											test="@copy-to and not(contains(@chunk, 'to-content')) and 
+											test="@copy-to and not(contains(@chunk, 'to-content')) and
                                       (not(@format) or @format = 'dita' or @format = 'ditamap') ">
 											<xsl:call-template name="replace-extension">
 												<xsl:with-param name="filename" select="@copy-to" />
@@ -307,7 +307,7 @@
 			</xsl:if>
 			<xsl:choose>
 				<xsl:when
-					test="@copy-to and not(contains(@chunk, 'to-content')) and 
+					test="@copy-to and not(contains(@chunk, 'to-content')) and
                         (not(@format) or @format = 'dita' or @format = 'ditamap') ">
 					<xsl:value-of select="@copy-to" />
 				</xsl:when>
