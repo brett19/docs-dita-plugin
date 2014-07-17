@@ -45,7 +45,7 @@
 				<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
 
 				<link href="../css/base.css" rel="stylesheet" />
-				<script src="/js/main.js"></script>
+				<script src="../js/main.js"></script>
 
 			</head>
 
