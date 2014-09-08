@@ -25,14 +25,19 @@
 				<meta charset="utf-8" />
 				<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
-				<meta name="description" content="Couchbase Server product documentation" />
-
+				<meta name="description" content="Couchbase Server documentation" />
+				<title>
+					<xsl:apply-templates
+						select="*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/title ')]"
+						mode="text-only" />
+				</title>
+<!--
 				<style>
 					body{
 						padding-top:40px; /* make the container go all the way to the bottom of the top bar */
 					}</style>
-
-				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+-->
+				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
 
 				<link
 					href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
@@ -40,12 +45,13 @@
 				<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.js" />
 
 				<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/default.min.css" />
-				<script src="//yandex.st/highlightjs/8.0/highlight.min.js"></script>
+				<script src="//yandex.st/highlightjs/8.0/highlight.min.js" />
 
-				<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css' />
+				<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700"
+					rel="stylesheet" type="text/css" />
 
-				<link href="../css/base.css" rel="stylesheet" />
-				<script src="../js/main.js"></script>
+				<link href="/assets-dita/css/base.css" rel="stylesheet" />
+				<script src="/assets-dita/js/main.js" />
 
 			</head>
 
@@ -53,17 +59,32 @@
 				<header class="navbar navbar-fixed-top">
 					<div class="navbar-inner">
 						<div class="container-fluid container">
-							<a class="brand" href="http://www.couchbase.com/"> <img src="../images/cb-icon-sofa.png" class="logo" /></a>
-							<a class="brand" style="color:#000552;" href="/">Couchbase Documentation <small>beta</small></a>
+							<a class="brand" href="http://www.couchbase.com/">
+								<img src="/assets-dita/images/cb-icon-sofa.png" class="logo" />
+							</a>
+							<a class="brand" style="color:#000552;" href="/">Couchbase Documentation</a>
 							<div class="nav-collapse collapse">
 								<ul class="nav">
-									<li><a href="/">Docs Home</a></li>
-									<li><a href="/archive-index.html">Docs Archive</a></li>
+									<li>
+										<a href="/">Docs Home</a>
+									</li>
+									<li>
+										<a href="/archive-index">Docs Archive</a>
+									</li>
+									
 								</ul>
-							</div><!--/.nav-collapse -->
-							<!--<div><gcse:searchresults></gcse:searchresults></div>-->
+							</div>
+
+
 						</div>
 					</div>
+
+<!--
+					<div class="gcse-wrapper">
+						<div class="gcse-search" />
+					</div>
+-->
+					
 				</header>
 
 				<div id="content" class="container-fluid container">
@@ -76,15 +97,26 @@
 
 				<footer>
 					<div class="navbar navbar-fixed-bottom">
-					<div class="navbar-inner">
-						<div class="container-fluid container">
-							<div class="copyright">
-								© 2014 COUCHBASE All rights reserved.
+						<div class="navbar-inner">
+							<div class="container-fluid container">
+								<div class="copyright"> © 2014 COUCHBASE All rights reserved. </div>
 							</div>
 						</div>
 					</div>
-					</div>
 				</footer>
+				<script type="text/javascript" src="https://www.google.com/jsapi" />
+				<script>
+					(function() {
+					var cx = '018016427239405524608:fkg1v30apnm';
+					var gcse = document.createElement('script');
+					gcse.type = 'text/javascript';
+					gcse.async = true;
+					gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+					'//www.google.com/cse/cse.js?cx=' + cx;
+					var s = document.getElementsByTagName('script')[0];
+					s.parentNode.insertBefore(gcse, s);
+					})();
+				</script>
 
 			</body>
 		</html>

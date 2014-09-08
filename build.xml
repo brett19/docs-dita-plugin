@@ -29,6 +29,7 @@
         <include name="css/*.css"/>
         <include name="images/*.png"/>
         <include name="js/*.js"/>
+        <include name="assets-dita/**"/>       
       </fileset>
     </copy>
   </target>
