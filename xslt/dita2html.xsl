@@ -68,17 +68,14 @@
 									</li>
 									
 								</ul>
-							</div>
-
-
-						</div>
-					</div>
-
-<!--
+<!-- 
 					<div class="gcse-wrapper">
 						<div class="gcse-search" />
 					</div>
 -->
+							</div>
+						</div>
+					</div>
 					
 				</header>
 
