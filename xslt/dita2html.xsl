@@ -31,12 +31,7 @@
 						select="*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/title ')]"
 						mode="text-only" />
 				</title>
-<!--
-				<style>
-					body{
-						padding-top:40px; /* make the container go all the way to the bottom of the top bar */
-					}</style>
--->
+
 				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
 
 				<link
@@ -104,6 +99,7 @@
 						</div>
 					</div>
 				</footer>
+				
 				<script type="text/javascript" src="https://www.google.com/jsapi" />
 				<script>
 					(function() {

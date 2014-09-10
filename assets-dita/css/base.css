@@ -12,13 +12,13 @@
 	background-image:none;
 }
 
-ul.nav > li {
-	margin-bottom: initial;
+ul.nav > li{
+	margin-bottom:initial;
 }
 
 body{
 	font-family:'Open Sans', sans-serif;
-	padding: 40px 0;
+	padding:40px 0;
 }
 
 
@@ -61,11 +61,11 @@ ul{
 }
 
 li{
-	margin-bottom: 10px;
+	margin-bottom:10px;
 }
 
-dt {
-	padding-top: 0.5em;
+dt{
+	padding-top:0.5em;
 }
 
 div.copyright{
@@ -92,23 +92,25 @@ div.note{
 .remembertitle,
 .restrictiontitle,
 .tiptitle,
-.warningtitle {
+.warningtitle{
 	display:block;
 	font-weight:bold;
 }
 
-caption {
-	font-weight: bold;
+caption{
+	font-weight:bold;
 }
 
-table, tgroup, thead, tbody, th, td {
+/*
+table, thead, tbody, th, td {
 	border-style: solid;
    border-width: 1px;
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+*/
 
-thead > tr > th {
+thead > tr > th{
 	background-color:#e0dfcc;
 }
 
@@ -149,9 +151,8 @@ div.related-links{
 
 /* search box styling */
 
-.gcse-wrapper {
-	background-color: transparent;
-	border: red 0.5px solid; /* just here to help see what's going on */
+.gcse-wrapper{
+	background-color:transparent;
+	border:red 0.5px solid; /* just here to help see what's going on */
 }
-
 
