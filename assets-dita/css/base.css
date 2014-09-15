@@ -144,6 +144,10 @@ div.related-links{
 	font-weight:bold;
 }
 
+.apiname {
+	font-family: monospace;
+}
+
 .abstract{
 	margin-bottom:10px;
 }
