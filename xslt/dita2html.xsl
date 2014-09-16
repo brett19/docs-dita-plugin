@@ -120,11 +120,11 @@
 		<xsl:call-template name="generateBreadcrumbs" />
 		<xsl:call-template name="gen-user-sidetoc" />
 		<main class="span9">
-			<sidebar>
+			
 			<div class="gcse-wrapper">
 				<div class="gcse-search" />
 			</div>
-			</sidebar>
+			
 			<xsl:apply-templates />
 			<xsl:call-template name="gen-endnotes" />
 		</main>
