@@ -157,6 +157,9 @@ div.related-links{
 
 .gcse-wrapper{
 	background-color:transparent;
-	border:red 0.5px solid; /* just here to help see what's going on */
+	/* border:red 0.5px solid; /* just here to help see what's going on */
+	width: 300px;
+	float: right;
+	
 }
 
