@@ -33,11 +33,9 @@
 				</title>
 
 				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" />
-
-				<link
-					href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.min.css"
-					rel="stylesheet" />
-				<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.js" />
+				<link rel="stylesheet"
+					href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+				<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js" />
 
 				<link rel="stylesheet" href="//yandex.st/highlightjs/8.0/styles/default.min.css" />
 				<script src="//yandex.st/highlightjs/8.0/highlight.min.js" />
@@ -51,52 +49,46 @@
 			</head>
 
 			<body>
-				<header class="navbar navbar-fixed-top">
-					<div class="navbar-inner">
-						<div class="container-fluid container">
-							<a class="brand" href="http://www.couchbase.com/">
+				<header class="navbar navbar-default navbar-fixed-top">
+					<div class="container">
+						<div class="navbar-header">
+							<a class="navbar-brand" href="http://www.couchbase.com/">
 								<img src="/assets-dita/images/cb-icon-sofa.png" class="logo" />
 							</a>
-							<a class="brand" style="color:#000552;" href="/">Couchbase Documentation</a>
-							<div class="nav-collapse collapse">
-								<ul class="nav">
-									<li>
-										<a href="/">Docs Home</a>
-									</li>
-									<li>
-										<a href="/archive-index">Docs Archive</a>
-									</li>
-									
-								</ul>
-<!-- 
-					<div class="gcse-wrapper">
-						<div class="gcse-search" />
-					</div>
--->
-							</div>
+							<a class="navbar-brand" style="color:#000552;" href="/">Couchbase
+								Documentation</a>
 						</div>
+						<div class="navbar-collapse collapse">
+							<ul class="nav navbar-nav">
+								<li>
+									<a href="/">Docs Home</a>
+								</li>
+								<li>
+									<a href="/archive-index">Docs Archive</a>
+								</li>
+
+							</ul>
+
+						</div>
+
 					</div>
-					
+
 				</header>
 
-				<div id="content" class="container-fluid container">
-					<div class="row-fluid">
-
-
+				<div id="content" class="container">
+					<div class="row">
 						<xsl:apply-templates select="*" mode="chapterBody" />
 					</div>
 				</div>
 
 				<footer>
-					<div class="navbar navbar-fixed-bottom">
-						<div class="navbar-inner">
-							<div class="container-fluid container">
-								<div class="copyright"> © 2014 COUCHBASE All rights reserved. </div>
-							</div>
+					<div class="navbar navbar-default navbar-fixed-bottom">
+						<div class="container">
+							<div class="copyright"> © 2014 COUCHBASE All rights reserved. </div>
 						</div>
 					</div>
 				</footer>
-				
+
 				<script type="text/javascript" src="https://www.google.com/jsapi" />
 				<script>
 					(function() {
@@ -119,22 +111,22 @@
 	<xsl:template match="*" mode="chapterBody">
 		<xsl:call-template name="generateBreadcrumbs" />
 		<xsl:call-template name="gen-user-sidetoc" />
-		<main class="span9">
-			
+		<main class="col-md-9">
+
 			<div class="gcse-wrapper">
 				<div class="gcse-search" />
 			</div>
-			
+
 			<xsl:apply-templates />
 			<xsl:call-template name="gen-endnotes" />
 		</main>
 	</xsl:template>
 
 	<xsl:template match="*" mode="gen-user-sidetoc">
-		<nav class="span3">
+		<nav class="col-md-3">
 			<!--xsl:apply-templates select="$input.map/*[contains(@class, ' map/map ')]" mode="toc-pull"/-->
 			<div class="well">
-				<ul class="nav nav-list">
+				<ul class="nav nav-list list-group">
 					<xsl:apply-templates select="$current-topicrefs[1]" mode="toc-pull">
 						<xsl:with-param name="pathFromMaplist" select="$PATH2PROJ" />
 						<xsl:with-param name="children">
