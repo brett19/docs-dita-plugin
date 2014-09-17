@@ -56,7 +56,7 @@
 								<img src="/assets-dita/images/cb-icon-sofa.png" class="logo" />
 							</a>
 							<a class="navbar-brand" style="color:#000552;" href="/">Couchbase
-								Documentation</a>
+								Documentation <small>beta</small></a>
 						</div>
 						<div class="navbar-collapse collapse">
 							<ul class="nav navbar-nav">
