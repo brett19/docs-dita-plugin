@@ -1,0 +1,44 @@
+
+.developer-portal-content__wrapper table th {
+  background-color: #006784;
+  border: 0px;
+  color: #f9f9f9
+}
+
+.developer-portal-footer p, .developer-portal-footer a {
+  color: #f9f9f9 !important;
+}
+
+.developer-portal-content__wrapper {
+  padding: 2.4em;
+}
+
+.developer-portal-content__wrapper h1 {
+  margin: 0em 0em 0.2em 0em;
+}
+
+.filepath {
+	font-weight:bold;
+}
+
+.note {
+  border: 1px solid #c1bf99;
+  border-radius: 0.4em;
+  border-left: 0.7em solid #c1bf99;
+  padding: 0.2em 0.4em;
+  margin: 1em 0px;
+}
+
+.attentiontitle,
+.cautiontitle,
+.dangertitle,
+.fastpathtitle,
+.importanttitle,
+.notetitle,
+.remembertitle,
+.restrictiontitle,
+.tiptitle,
+.warningtitle {
+  display:block;
+	font-weight:bold;
+}

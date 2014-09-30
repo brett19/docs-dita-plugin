@@ -6,8 +6,9 @@
     <property name="args.xsl" location="${dita.plugin.com.couchbase.docs.html.dir}/xslt/dita2html.xsl"/>
     <property name="args.css.file" value="base.css"/>
     <property name="args.csspath" value="css"/>
+    <property name="args.devguide" value="no"/>
   </target>
-  
+
   <target name="com.couchbase.docs.html">
     <loadfile property="com.couchbase.docs.html.map" srcfile="${dita.temp.dir}/${user.input.file.listfile}">
       <filterchain>
@@ -16,21 +17,17 @@
     </loadfile>
     <makeurl property="com.couchbase.docs.html.map.url" file="${dita.temp.dir}/${com.couchbase.docs.html.map}"/>
   </target>
-  
+
   <target name="dita2com.couchbase.docs.html"
           depends="com.couchbase.docs.html.init,
                    build-init,
                    preprocess,
-                   copy-revflag, 
+                   copy-revflag,
                    com.couchbase.docs.html,
                    xhtml.topics">
-    <copy todir="${output.dir}">
-      <fileset dir="${dita.plugin.com.couchbase.docs.html.dir}">
-        <include name="css/*.css"/>
-        <include name="images/*.png"/>
-        <include name="js/*.js"/>
-      </fileset>
+    <copy todir="${output.dir}/assets">
+      <fileset dir="${dita.plugin.com.couchbase.docs.html.dir}/assets" />
     </copy>
   </target>
-    
+
 </project>
