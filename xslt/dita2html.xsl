@@ -105,19 +105,21 @@
 					</li>
 				</ul>
 
-				<form action="CB_TODO" class="developer-portal-header__search">
-					<ul>
-						<li>
-							<label for="developer-portal-header__search__query">Search query</label>
-							<input id="developer-portal-header__search__query" placeholder="Search Couchbase Server" type="search" />
-						</li>
-						<li>
-							<button type="submit">
-								<span>Search</span>
-							</button>
-						</li>
-					</ul>
-				</form>
+				<div action="CB_TODO" class="developer-portal-header__search">
+					<script>
+					  (function() {
+					    var cx = '007534842540608382678:caypygzgbt8';
+					    var gcse = document.createElement('script');
+					    gcse.type = 'text/javascript';
+					    gcse.async = true;
+					    gcse.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') +
+					        '//www.google.com/cse/cse.js?cx=' + cx;
+					    var s = document.getElementsByTagName('script')[0];
+					    s.parentNode.insertBefore(gcse, s);
+					  })();
+					</script>
+					<xsl:text disable-output-escaping='yes'>&lt;gcse:searchbox-only>&lt;/gcse:searchbox-only></xsl:text>
+				</div>
 			</div>
 		</nav>
 	</div>
