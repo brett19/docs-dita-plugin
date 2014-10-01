@@ -11,9 +11,9 @@
 }
 
 .note {
-  border: 1px solid #c1bf99;
+  border: 1px solid #0081a5;
   border-radius: 0.4em;
-  border-left: 0.7em solid #c1bf99;
+  border-left: 0.7em solid #0081a5;
   padding: 0.2em 0.4em;
   margin: 1em 0px;
 }
@@ -30,6 +30,14 @@
 .warningtitle {
   display:block;
 	font-weight:bold;
+}
+
+pre {
+  background: #f4f4f4;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+.codeph {
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
 }
 
 
@@ -65,4 +73,7 @@ input.gsc-search-button {
 }
 .developer-portal-sidebar__navigation__wrapper a span {
   max-width: initial;
+}
+.developer-portal-sidebar__navigation__wrapper a.current span {
+  color: #848380;
 }

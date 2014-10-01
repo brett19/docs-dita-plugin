@@ -108,7 +108,7 @@
 				<div action="CB_TODO" class="developer-portal-header__search">
 					<script>
 					  (function() {
-					    var cx = '007534842540608382678:caypygzgbt8';
+					    var cx = '018016427239405524608:fkg1v30apnm';
 					    var gcse = document.createElement('script');
 					    gcse.type = 'text/javascript';
 					    gcse.async = true;
@@ -118,7 +118,7 @@
 					    s.parentNode.insertBefore(gcse, s);
 					  })();
 					</script>
-					<xsl:text disable-output-escaping='yes'>&lt;gcse:searchbox-only>&lt;/gcse:searchbox-only></xsl:text>
+					<xsl:text disable-output-escaping='yes'>&lt;gcse:search>&lt;/gcse:search></xsl:text>
 				</div>
 			</div>
 		</nav>
@@ -188,17 +188,16 @@
 	</xsl:template>
 
 	<xsl:template match="*" mode="userSidetoc">
-			<!--xsl:apply-templates select="$input.map/*[contains(@class, ' map/map ')]" mode="toc-pull"/-->
-					<xsl:apply-templates select="$current-topicrefs[1]" mode="toc-pull">
-						<xsl:with-param name="pathFromMaplist" select="$PATH2PROJ" />
-						<xsl:with-param name="children">
-							<xsl:apply-templates
-								select="$current-topicrefs[1]/*[contains(@class, ' map/topicref ')]"
-								mode="toc">
-								<xsl:with-param name="pathFromMaplist" select="$PATH2PROJ" />
-							</xsl:apply-templates>
-						</xsl:with-param>
-					</xsl:apply-templates>
+		<xsl:apply-templates select="$current-topicrefs[1]" mode="toc-pull">
+			<xsl:with-param name="pathFromMaplist" select="$PATH2PROJ" />
+			<xsl:with-param name="children">
+				<xsl:apply-templates
+					select="$current-topicrefs[1]/*[contains(@class, ' map/topicref ')]"
+					mode="toc">
+					<xsl:with-param name="pathFromMaplist" select="$PATH2PROJ" />
+				</xsl:apply-templates>
+			</xsl:with-param>
+		</xsl:apply-templates>
 	</xsl:template>
 
 
@@ -248,9 +247,9 @@
 				</xsl:apply-templates>
 				<xsl:choose>
 					<xsl:when test="normalize-space($title)">
-						<li class="section section--has-sub-sections section--active e">
-							<xsl:if test=". is $current-topicref">
-								<xsl:attribute name="class">section section--has-sub-sections section--active g</xsl:attribute>
+						<li class="section">
+							<xsl:if test="topicref">
+								<xsl:attribute name="class">section section--has-sub-sections section--active</xsl:attribute>
 							</xsl:if>
 							<xsl:choose>
 								<xsl:when test="normalize-space(@href)">
@@ -294,13 +293,13 @@
 									</a>
 								</xsl:when>
 								<xsl:otherwise>
-									<span class="z">
+									<span>
 										<xsl:value-of select="$title" />
 									</span>
 								</xsl:otherwise>
 							</xsl:choose>
 							<xsl:if test="$children">
-								<ul class="sub-sections d">
+								<ul class="sub-sections">
 									<xsl:copy-of select="$children" />
 								</ul>
 							</xsl:if>
@@ -338,7 +337,10 @@
 		</xsl:variable>
 		<xsl:choose>
 			<xsl:when test="normalize-space($title)">
-				<li class="section b">
+				<li class="section">
+					<xsl:if test="topicref">
+						<xsl:attribute name="class">section section--has-sub-sections</xsl:attribute>
+					</xsl:if>
 					<xsl:choose>
 						<xsl:when test="normalize-space(@href)">
 							<a>
@@ -372,7 +374,7 @@
 										</xsl:otherwise>
 									</xsl:choose>
 								</xsl:attribute>
-								<span class="y">
+								<span>
 									<xsl:value-of select="$title" />
 								</span>
 							</a>
