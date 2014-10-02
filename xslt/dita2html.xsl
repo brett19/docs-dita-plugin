@@ -68,7 +68,14 @@
 	<div class="layout-wrapper">
 		<div class="developer-portal-header__hgroup">
 			<h1 class="developer-portal-header__logo"><a href="http://couchbase.com" rel="home">Couchbase</a></h1>
-			<h2 class="developer-portal-header__page-title">Couchbase Server</h2>
+			<xsl:choose>
+				<xsl:when test="$DEVGUIDE='yes'">
+					<h2 class="developer-portal-header__page-title">Developing with Couchbase Server</h2>
+				</xsl:when>
+				<xsl:otherwise>
+					<h2 class="developer-portal-header__page-title">Couchbase Server</h2>
+				</xsl:otherwise>
+			</xsl:choose>
 		</div>
 
 		<nav class="developer-portal-header__navigation" id="primary-navigation" role="navigation">
@@ -325,6 +332,21 @@
 			<xsl:with-param name="pathFromMaplist" select="$pathFromMaplist" />
 		</xsl:apply-templates>
 	</xsl:template>
+
+<xsl:template
+	match="*[contains(@class, ' mapgroup-d/topicgroup ')]"
+	mode="toc-pull" priority="15">
+	<li>SHOULD NOT REACH THIS</li>
+</xsl:template>
+
+<xsl:template
+	match="*[contains(@class, ' mapgroup-d/topicgroup ')]"
+	mode="toc" priority="15">
+	<xsl:param name="pathFromMaplist" />
+	<xsl:apply-templates select="*[contains(@class, ' map/topicref ')]" mode="toc">
+		<xsl:with-param name="pathFromMaplist" select="$pathFromMaplist" />
+	</xsl:apply-templates>
+</xsl:template>
 
 	<xsl:template
 		match="*[contains(@class, ' map/topicref ')]
