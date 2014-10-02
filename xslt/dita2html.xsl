@@ -95,20 +95,30 @@
 				</xsl:choose>
 
 				<ul class="developer-portal-header__navigation__items">
+					<xsl:choose>
+						<xsl:when test="$DEVGUIDE='yes'">
+							<li class="developer-portal-header__navigation__item">
+								<a href="/admin">Couchbase Server Documentation</a>
+							</li>
+						</xsl:when>
+						<xsl:otherwise>
+							<li class="developer-portal-header__navigation__item">
+								<a href="/develop">Developer Documentation</a>
+							</li>
+						</xsl:otherwise>
+					</xsl:choose>
+
 					<li class="developer-portal-header__navigation__item">
-						<a href="CB_TODO">Couchbase Server</a>
-					</li>
-					<li class="developer-portal-header__navigation__item">
-						<a href="CB_TODO">Couchbase Mobile</a>
+						<a href="http://developer.couchbase.com/mobile">Couchbase Mobile</a>
 					</li>
 					<li class="developer-portal-header__navigation__item">
 						<a href="http://site-qa.cbauthx.com/open-source">Open Source Projects</a>
 					</li>
 					<li class="developer-portal-header__navigation__item">
-						<a href="http://www.couchbase.com/communities/q-and-a">Forums</a>
+						<a href="http://forums.couchbase.com">Forums</a>
 					</li>
 					<li class="developer-portal-header__navigation__item">
-						<a href="http://docs.couchbase.com">Documentation Archives</a>
+						<a href="http://docs.couchbase.com/archive-index">Documentation Archives</a>
 					</li>
 				</ul>
 
