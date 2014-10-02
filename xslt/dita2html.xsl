@@ -103,7 +103,7 @@
 						</xsl:when>
 						<xsl:otherwise>
 							<li class="developer-portal-header__navigation__item">
-								<a href="/develop">Developer Documentation</a>
+								<a href="/developer">Developer Documentation</a>
 							</li>
 						</xsl:otherwise>
 					</xsl:choose>
@@ -182,7 +182,7 @@
 			<p class="legal">
 				<span class="license">© 2014 <b class="company-name">Couchbase</b> All rights reserved.</span>
 				<a href="http://site-qa.cbauthx.com/developers">Developer Portal</a>
-				<a href="http://www.couchbase.com/communities/q-and-a">Forums</a>
+				<a href="http://forums.couchbase.com">Forums</a>
 				<a href="http://site-qa.cbauthx.com/downloads">Download</a>
 				<a href="CB_TODO">Customer Support Login</a>
 			</p>
