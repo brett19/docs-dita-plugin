@@ -192,6 +192,7 @@
 
 <!-- usage info at http://prismjs.com/ -->
 <script src="{$OUTRELDIR}/assets/javascripts/vendor/prism.js" ></script>
+<script type="text/javascript">var BASEPATH='<xsl:value-of select="$OUTRELDIR" />/';</script>
 <script src="{$OUTRELDIR}/assets/javascripts/init.js"></script>
 
 </body>
