@@ -84,6 +84,9 @@ input.gsc-search-button:focus, input.gsc-search-button:hover {
 
 
 /* Bretts Template Overrides */
+.textblock__content ul {
+  padding-left: 2.5em;
+}
 .developer-porta-header__navigation__back {
   display: none;
 }
