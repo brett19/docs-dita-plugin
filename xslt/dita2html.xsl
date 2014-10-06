@@ -83,12 +83,12 @@
 
 				<xsl:choose>
 					<xsl:when test="$DEVGUIDE='yes'">
-						<a href="http://site-qa.cbauthx.com/developers" class="developer-porta-header__navigation__back">
+						<a href="http://www.couchbase.com/developers" class="developer-porta-header__navigation__back">
 							Return to Developer Portal
 						</a>
 					</xsl:when>
 					<xsl:otherwise>
-						<a href="http://site-qa.cbauthx.com/learn" class="developer-porta-header__navigation__back">
+						<a href="http://www.couchbase.com/learn" class="developer-porta-header__navigation__back">
 							Return to Learn
 						</a>
 					</xsl:otherwise>
@@ -112,7 +112,7 @@
 						<a href="http://developer.couchbase.com/mobile">Couchbase Mobile</a>
 					</li>
 					<li class="developer-portal-header__navigation__item">
-						<a href="http://site-qa.cbauthx.com/open-source">Open Source Projects</a>
+						<a href="http://www.couchbase.com/open-source">Open Source Projects</a>
 					</li>
 					<li class="developer-portal-header__navigation__item">
 						<a href="http://forums.couchbase.com">Forums</a>
@@ -122,7 +122,7 @@
 					</li>
 				</ul>
 
-				<div action="CB_TODO" class="developer-portal-header__search">
+				<div class="developer-portal-header__search">
 					<script>
 					  (function() {
 					    var cx = '018016427239405524608:fkg1v30apnm';
@@ -181,10 +181,10 @@
 		<footer class="developer-portal-footer" role="contentinfo">
 			<p class="legal">
 				<span class="license">© 2014 <b class="company-name">Couchbase</b> All rights reserved.</span>
-				<a href="http://site-qa.cbauthx.com/developers">Developer Portal</a>
+				<a href="http://www.couchbase.com/developers">Developer Portal</a>
 				<a href="http://forums.couchbase.com">Forums</a>
-				<a href="http://site-qa.cbauthx.com/downloads">Download</a>
-				<a href="CB_TODO">Customer Support Login</a>
+				<a href="http://www.couchbase.com/downloads">Download</a>
+				<a href="http://support.couchbase.com/">Customer Support Login</a>
 			</p>
 		</footer>
 	</div>
