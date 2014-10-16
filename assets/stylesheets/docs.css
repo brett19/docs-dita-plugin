@@ -10,6 +10,34 @@
 	font-weight:bold;
 }
 
+.msgph {
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 85%;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+  background-color: #777777;
+  position: relative;
+  top: -0.3em;
+  margin-left: 0.3em;
+}
+.msgph.current {
+  background-color: #46A746;
+}
+.msgph.stable {
+  background-color: #777777;
+}
+.msgph.snapshot {
+  background-color: #C63F3B;
+}
+.msgph.preview {
+  background-color: #F0AD4E;
+}
+
 .note {
   border: 1px solid #0081a5;
   border-radius: 0.4em;
