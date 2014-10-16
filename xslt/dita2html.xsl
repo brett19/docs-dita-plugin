@@ -37,7 +37,11 @@
 <head>
 	<meta charset="utf-8" />
 
-	<title>Couchbase</title>
+	<title>
+		<xsl:apply-templates
+			select="*[contains(@class, ' topic/topic ')]/*[contains(@class, ' topic/title ')]"
+			mode="text-only" />
+	</title>
 
 	<meta name="apple-mobile-web-app-title" content="Couchbase" />
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
