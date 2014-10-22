@@ -205,38 +205,37 @@
 	</xsl:template>
 
 	<xsl:template match="*[contains(@class, ' topic/related-links ')]" name="topic.related-links">
-  	<nav>
-    	<xsl:call-template name="commonattributes"/>
+		<nav>
+			<xsl:call-template name="commonattributes"/>
 
-			<h3>Related Links</h3>
+				<h3>Related Links</h3>
 
-      <xsl:if test="$include.roles = ('child', 'descendant')">
-        <xsl:call-template name="ul-child-links"/>
-        <!--handle child/descendants outside of linklists in collection-type=unordered or choice-->
-        <xsl:call-template name="ol-child-links"/>
-        <!--handle child/descendants outside of linklists in collection-type=ordered/sequence-->
-      </xsl:if>
-      <xsl:if test="$include.roles = ('next', 'previous', 'parent')">
-        <xsl:call-template name="next-prev-parent-links"/>
-        <!--handle next and previous links-->
-      </xsl:if>
-      <!-- Group all unordered links (which have not already been handled by prior sections). Skip duplicate links. -->
-      <!-- NOTE: The actual grouping code for related-links:group-unordered-links is common between
-             transform types, and is located in ../common/related-links.xsl. Actual code for
-             creating group titles and formatting links is located in XSL files specific to each type. -->
-      <xsl:variable name="unordered-links" as="element(linklist)*">
-       <xsl:apply-templates select="." mode="related-links:group-unordered-links">
-         <xsl:with-param name="nodes"
-                         select="descendant::*[contains(@class, ' topic/link ')]
-                                              [not(related-links:omit-from-unordered-links(.))]
-                                              [generate-id(.) = generate-id(key('hideduplicates', related-links:hideduplicates(.))[1])]"/>
-       </xsl:apply-templates>
-      </xsl:variable>
-      <xsl:apply-templates select="$unordered-links"/>
-      <!--linklists - last but not least, create all the linklists and their links, with no sorting or re-ordering-->
-      <xsl:apply-templates select="*[contains(@class, ' topic/linklist ')]"/>
-    </nav>
-  </xsl:template>
+	      <xsl:if test="$include.roles = ('child', 'descendant')">
+			<xsl:call-template name="ul-child-links"/>
+			<!--handle child/descendants outside of linklists in collection-type=unordered or choice-->
+
+			<xsl:call-template name="ol-child-links"/>
+			<!--handle child/descendants outside of linklists in collection-type=ordered/sequence-->
+		</xsl:if>
+		<xsl:if test="$include.roles = ('next', 'previous', 'parent')">
+			<xsl:call-template name="next-prev-parent-links"/>
+			<!--handle next and previous links-->
+		</xsl:if>
+		<!-- Group all unordered links (which have not already been handled by prior sections). Skip duplicate links. -->
+		<!-- NOTE: The actual grouping code for related-links:group-unordered-links is common between
+					transform types, and is located in ../common/related-links.xsl. Actual code for
+					creating group titles and formatting links is located in XSL files specific to each type. -->
+		<xsl:apply-templates select="." mode="related-links:group-unordered-links">
+			<xsl:with-param name="nodes"
+											select="descendant::*[contains(@class, ' topic/link ')]
+																					[not(related-links:omit-from-unordered-links(.))]
+																					[generate-id(.) = generate-id(key('hideduplicates', related-links:hideduplicates(.))[1])]"/>
+		</xsl:apply-templates>
+
+		<!--linklists - last but not least, create all the linklists and their links, with no sorting or re-ordering-->
+		<xsl:apply-templates select="*[contains(@class, ' topic/linklist ')]"/>
+	</nav>
+	</xsl:template>
 
 	<xsl:template match="*" mode="chapterBody">
 		<xsl:call-template name="generateBreadcrumbs" />
