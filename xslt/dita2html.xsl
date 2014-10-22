@@ -2,6 +2,7 @@
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:dita-ot="http://dita-ot.sourceforge.net/ns/201007/dita-ot"
 	xmlns:ditamsg="http://dita-ot.sourceforge.net/ns/200704/ditamsg" version="2.0"
+	xmlns:related-links="http://dita-ot.sourceforge.net/ns/200709/related-links"
 	exclude-result-prefixes="dita-ot ditamsg">
 
 	<xsl:import href="plugin:org.dita.xhtml:xsl/dita2html-base.xsl" />
@@ -203,6 +204,29 @@
 </html>
 	</xsl:template>
 
+<xsl:template match="*[contains(@class,' topic/related-links ')]" name="topic.related-links">
+<div>
+	<xsl:call-template name="commonattributes"/>
+
+	<h3>Related Links</h3>
+
+	<xsl:if test="contains($include.roles, ' child ') or contains($include.roles, ' descendant ')">
+		<xsl:call-template name="ul-child-links"/><!--handle child/descendants outside of linklists in collection-type=unordered or choice-->
+		<xsl:call-template name="ol-child-links"/><!--handle child/descendants outside of linklists in collection-type=ordered/sequence-->
+	</xsl:if>
+	<xsl:if test="contains($include.roles, ' next ') or contains($include.roles, ' previous ') or contains($include.roles, ' parent ')">
+		<xsl:call-template name="next-prev-parent-links"/><!--handle next and previous links-->
+	</xsl:if>
+	<xsl:apply-templates select="." mode="related-links:group-unordered-links">
+			<xsl:with-param name="nodes" select="descendant::*[contains(@class, ' topic/link ')]
+				[count(. | key('omit-from-unordered-links', 1)) != count(key('omit-from-unordered-links', 1))]
+				[generate-id(.)=generate-id((key('hideduplicates', concat(ancestor::*[contains(@class, ' topic/related-links ')]/parent::*[contains(@class, ' topic/topic ')]/@id, ' ',@href,@scope,@audience,@platform,@product,@otherprops,@rev,@type,normalize-space(string-join(child::*, ' ')))))[1])]"/>
+	</xsl:apply-templates>
+
+	<!--linklists - last but not least, create all the linklists and their links, with no sorting or re-ordering-->
+	<xsl:apply-templates select="*[contains(@class,' topic/linklist ')]"/>
+</div>
+</xsl:template>
 
 	<xsl:template match="*" mode="chapterBody">
 		<xsl:call-template name="generateBreadcrumbs" />
