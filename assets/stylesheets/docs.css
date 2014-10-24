@@ -10,6 +10,14 @@
   position: relative;
 }
 
+.developer-portal-sidebar__navigation__wrapper .sub-sections ul ul span {
+  padding-left: 5.5em;
+}
+
+.developer-portal-sidebar__navigation__wrapper .sub-sections ul ul ul span {
+  padding-left: 7.0em;
+}
+
 .product-action {
   position: absolute;
   top: 0.8em;
