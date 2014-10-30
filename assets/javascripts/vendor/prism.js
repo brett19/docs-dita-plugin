@@ -23,6 +23,8 @@ Prism.languages.objectivec=Prism.languages.extend("c",{keyword:/(\b(asm|typeof|i
 Prism.languages.ini={comment:/^\s*;.*$/gm,important:/\[.*?\]/gm,constant:/^\s*[^\s\=]+?(?=[ \t]*\=)/gm,"attr-value":{pattern:/\=.*/gm,inside:{punctuation:/^[\=]/g}}};;
 Prism.languages.latex={comment:/%.*?(\r?\n|$)$/m,string:/(\$)(\\?.)*?\1/g,punctuation:/[{}]/g,selector:/\\[a-z;,:\.]*/i};;
 Prism.languages.git={comment:/^#.*$/m,string:/("|')(\\?.)*?\1/gm,command:{pattern:/^.*\$ git .*$/m,inside:{parameter:/\s(--|-)\w+/m}},coord:/^@@.*@@$/m,deleted:/^-(?!-).+$/m,inserted:/^\+(?!\+).+$/m,commit_sha1:/^commit \w{40}$/m}
+Prism.languages.xml=Prism.languages.extend('markup',{});
+Prism.languages.json=Prism.languages.extend('javascript',{});
 ;
 Prism.hooks.add("after-highlight",function(e){var n=e.element.parentNode;if(n&&/pre/i.test(n.nodeName)&&-1!==n.className.indexOf("line-numbers")){var t,a=1+e.code.split("\n").length;lines=new Array(a),lines=lines.join("<span></span>"),t=document.createElement("span"),t.className="line-numbers-rows",t.innerHTML=lines,n.hasAttribute("data-start")&&(n.style.counterReset="linenumber "+(parseInt(n.getAttribute("data-start"),10)-1)),e.element.appendChild(t)}});;
 !function(){if(self.Prism){var a={csharp:"C#",cpp:"C++"};Prism.hooks.add("before-highlight",function(e){var t=a[e.language]||e.language;e.element.setAttribute("data-language",t)})}}();;
