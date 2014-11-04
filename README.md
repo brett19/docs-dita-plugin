@@ -22,7 +22,7 @@ $ cd /tmp
 $ wget {$DITA_OT_URL}
 $ tar xzvf {$DITA_OT} ~/docs-devkit
 $ cd ~/docs-devkit
-$ git clone https://github.com/brett19/docs-dita-plugin.git plugins/com.couchbase.docs.html
+$ git clone -b newdocs https://github.com/brett19/docs-dita-plugin.git plugins/com.couchbase.docs.html
 $ ./startcmd.sh
 $ ant -f integrator.xml
 $ ant -DnoImagelist=1 -Dargs.devguide=yes -Dargs.input=/cb-docs/developer/developer.ditamap -Doutput.dir=/Library/WebServer/Documents/developer -Dtranstype=com.couchbase.docs.html
