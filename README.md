@@ -12,9 +12,9 @@ To use this plugin, here is a short rundown of how to get set up.
    `ant -f integrator.xml`
 1. Build your docs (Note: paths must be absolute):
    1. To build the developer documentation:
-      `ant -DnoImagelist=1 -Dargs.devguide=yes -Dargs.input={YOUR_DOCS_DIR}/developer/developer.ditamap -Doutput.dir={OUTPUT_FOLDER}/developer -Dtranstype=com.couchbase.docs.html`
+      `ant -Dargs.devguide=yes -Dargs.input={YOUR_DOCS_DIR}/developer/developer.ditamap -Doutput.dir={OUTPUT_FOLDER}/developer -Dtranstype=com.couchbase.docs.html`
    1. To build the administrator documentation:
-      `ant -DnoImagelist=1 -Dargs.devguide=no -Dargs.input={YOUR_DOCS_DIR}/learn/learn.ditamap -Doutput.dir={OUTPUT_FOLDER}/admin -Dtranstype=com.couchbase.docs.html`
+      `ant -Dargs.devguide=no -Dargs.input={YOUR_DOCS_DIR}/learn/learn.ditamap -Doutput.dir={OUTPUT_FOLDER}/admin -Dtranstype=com.couchbase.docs.html`
 
 Here is a full example of installing and building the developer docs to MacOS built in webserver:
 ```bash
@@ -25,5 +25,5 @@ $ cd ~/docs-devkit
 $ git clone -b newdocs https://github.com/brett19/docs-dita-plugin.git plugins/com.couchbase.docs.html
 $ ./startcmd.sh
 $ ant -f integrator.xml
-$ ant -DnoImagelist=1 -Dargs.devguide=yes -Dargs.input=/cb-docs/developer/developer.ditamap -Doutput.dir=/Library/WebServer/Documents/developer -Dtranstype=com.couchbase.docs.html
+$ ant -Dargs.devguide=yes -Dargs.input=/cb-docs/developer/developer.ditamap -Doutput.dir=/Library/WebServer/Documents/developer -Dtranstype=com.couchbase.docs.html
 ```
