@@ -1,7 +1,7 @@
 /* line 1, ../sass/legacy.scss */
 .global-header__logo a {
   background: none;
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/assets/images/logo.png', sizingMethod='scale')";
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../images/logo.png', sizingMethod='scale')";
 }
 
 /* line 6, ../sass/legacy.scss */

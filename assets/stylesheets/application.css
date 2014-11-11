@@ -192,29 +192,29 @@ textarea {
   font-family: "Kievit OT";
   font-style: normal;
   font-weight: normal;
-  src: url("/assets/fonts/kievitot-regular.eot");
-  src: url("/assets/fonts/kievitot-regular.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/kievitot-regular.woff") format("woff");
+  src: url("../fonts/kievitot-regular.eot");
+  src: url("../fonts/kievitot-regular.eot?#iefix") format("embedded-opentype"), url("../fonts/kievitot-regular.woff") format("woff");
 }
 @font-face {
   font-family: "Kievit OT";
   font-style: normal;
   font-weight: bold;
-  src: url("/assets/fonts/kievitot-bold.eot");
-  src: url("/assets/fonts/kievitot-bold.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/kievitot-bold.woff") format("woff");
+  src: url("../fonts/kievitot-bold.eot");
+  src: url("../fonts/kievitot-bold.eot?#iefix") format("embedded-opentype"), url("../fonts/kievitot-bold.woff") format("woff");
 }
 @font-face {
   font-family: "Kievit OT";
   font-style: italic;
   font-weight: normal;
-  src: url("/assets/fonts/kievitot-italic.eot");
-  src: url("/assets/fonts/kievitot-italic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/kievitot-italic.woff") format("woff");
+  src: url("../fonts/kievitot-italic.eot");
+  src: url("../fonts/kievitot-italic.eot?#iefix") format("embedded-opentype"), url("../fonts/kievitot-italic.woff") format("woff");
 }
 @font-face {
   font-family: "Kievit OT";
   font-style: italic;
   font-weight: bold;
-  src: url("/assets/fonts/kievitot-bolditalic.eot");
-  src: url("/assets/fonts/kievitot-bolditalic.eot?#iefix") format("embedded-opentype"), url("/assets/fonts/kievitot-bolditalic.woff") format("woff");
+  src: url("../fonts/kievitot-bolditalic.eot");
+  src: url("../fonts/kievitot-bolditalic.eot?#iefix") format("embedded-opentype"), url("../fonts/kievitot-bolditalic.woff") format("woff");
 }
 /* line 1, ../sass/components/_article-listing.scss */
 .article-listing__header {
