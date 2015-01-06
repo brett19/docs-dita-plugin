@@ -99,8 +99,32 @@ pre {
   background: #f4f4f4;
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
 }
-.codeph {
+
+.codeph,
+.cmdname,
+.apiname {
   font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+
+.menucascade, .uicontrol {
+	font-weight: bold;
+}
+
+.tablecap {
+	font-weight: bold;
+}
+
+.varname {
+	font-style: italic;
+}
+
+.parmname {
+	font-style: italic;
+	font-weight: bold;
+}
+
+wintitle {
+	font-weight: bold;
 }
 
 
