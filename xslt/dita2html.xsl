@@ -199,6 +199,7 @@
 <script src="{$OUTRELDIR}/assets/javascripts/vendor/prism.js" ></script>
 <script type="text/javascript">var BASEPATH='<xsl:value-of select="$OUTRELDIR" />/';</script>
 <script src="{$OUTRELDIR}/assets/javascripts/init.js"></script>
+<script type="text/javascript" src="https://issues.couchbase.com/s/en_US-pvmaib-418945332/845/131/1.2.9/_/download/batch/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector/com.atlassian.jira.collector.plugin.jira-issue-collector-plugin:issuecollector.js?collectorId=86389172"></script>
 
 </body>
 </html>
