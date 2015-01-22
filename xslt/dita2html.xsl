@@ -185,7 +185,7 @@
 
 		<footer class="developer-portal-footer" role="contentinfo">
 			<p class="legal">
-				<span class="license">© 2014 <b class="company-name">Couchbase</b> All rights reserved.</span>
+				<span class="license">© 2011–2015 <b class="company-name">Couchbase</b> All rights reserved.</span>
 				<a href="http://www.couchbase.com/developers">Developer Portal</a>
 				<a href="http://forums.couchbase.com">Forums</a>
 				<a href="http://www.couchbase.com/downloads">Download</a>
