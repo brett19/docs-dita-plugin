@@ -75,10 +75,10 @@
 			<h1 class="developer-portal-header__logo"><a href="http://couchbase.com" rel="home">Couchbase</a></h1>
 			<xsl:choose>
 				<xsl:when test="$DEVGUIDE='yes'">
-					<h2 class="developer-portal-header__page-title">Developing with Couchbase Server</h2>
+					<p class="developer-portal-header__page-title">Developing with Couchbase Server</p>
 				</xsl:when>
 				<xsl:otherwise>
-					<h2 class="developer-portal-header__page-title">Couchbase Server</h2>
+					<p class="developer-portal-header__page-title">Couchbase Server</p>
 				</xsl:otherwise>
 			</xsl:choose>
 		</div>
@@ -209,7 +209,7 @@
 		<nav>
 			<xsl:call-template name="commonattributes"/>
 
-				<h3>Related Links</h3>
+				<h2>Related information</h2>
 
 	      <xsl:if test="$include.roles = ('child', 'descendant')">
 			<xsl:call-template name="ul-child-links"/>

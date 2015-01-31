@@ -25,9 +25,26 @@
   text-align: right;
 }
 
+/*
 .related-links {
     border-top: 1px solid black;
     margin-bottom: 0.5em;
+}
+*/
+
+.olchildlinks:before {
+	content: "Subtopics:";
+	font-weight: bold;
+	margin-left: -40px;
+}
+
+.linklist {
+	padding-top: 1em;
+}
+
+.linklist:before {
+	content: "Related topics:";
+	font-weight: bold;
 }
 
 .product-action a {
@@ -125,6 +142,17 @@ pre {
 
 wintitle {
 	font-weight: bold;
+}
+
+h2 {
+	border-bottom: thin solid;
+	line-height: 1.2;
+	margin-botton: 0;
+}
+
+dt {
+	font-weight: bold;
+	margin-top: 0.5em;
 }
 
 
