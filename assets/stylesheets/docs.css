@@ -1,3 +1,10 @@
+/* JIRA overrides */
+
+.atlwdg-trigger.atlwdg-SUBTLE {
+  margin-right: 20px;
+}
+
+
 /* DITA overrides */
 
 .developer-portal-content__wrapper table th {
